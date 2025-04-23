@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs - Student Help Website</title>
+
+  <header class="h">
+    <nav>
+        <ul>
+          <li><a href="https://maithili2311.github.io/Homepage2/">Home</a></li>
+          <li><a href="https://maithili2311.github.io/Quiz2/">Quiz</a></li>
+          <li><a href="https://maithili2311.github.io/Formulas2/">Formulas</a></li>
+          <li><a href="https://maithili2311.github.io/FAQs2/">FAQs</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Alpine.js for interactivity -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      background: linear-gradient(120deg, #f0f4ff 0%, #ffffff 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    [x-show] {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .faq-box {
+      background-color: white;
+      border: 1px solid #dbeafe;
+      padding: 1.25rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .faq-box:hover {
+      border-color: #93c5fd;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .faq-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #000000;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .faq-button {
+      color: #000000;
+      font-size: 1.125rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.3s ease;
+    }
+
+    .faq-button:hover {
+      color: #1e3a8a;
+    }
+
+    .faq-icon {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #1d4ed8;
+      width: 1.25rem;
+      display: inline-block;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #e5e7eb;
+      font-size: 0.875rem;
+      color: #4b5563;
+    }
+
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.h {
+    background: url('https://png.pngtree.com/background/20230427/original/pngtree-all-the-old-books-on-the-shelves-in-a-library-picture-image_2496728.jpg') center/cover no-repeat;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+/* Hero Section */
+.hero {
+    background: url('https://png.pngtree.com/background/20230427/original/pngtree-all-the-old-books-on-the-shelves-in-a-library-picture-image_2496728.jpg') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about {
+    background: white;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+}
+
+.about img {
+    width: 70%;
+    border-radius: px;
+}
+
+.about-text {
+    width: 60%;
+}
+
+.about h2 {
+    color: #d32f2f;
+}
+
+.about .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: red;
+    text-decoration: none;
+}
+
+/* Overview Section */
+.overview {
+    padding: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.overview h2 {
+    margin-bottom: 20px;
+}
+
+.overview-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Facilities Section */
+.facilities {
+    background: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.facilities h2 {
+    margin-bottom: 20px;
+}
+
+.facility-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.facility {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.facility img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Mission Section */
+.mission {
+    background: #d32f2f;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.mission h2 {
+    margin-bottom: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    
+}
+
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-8 shadow-md">
+    <div class="max-w-5xl mx-auto px-4">
+      <h1 class="text-3xl font-bold">Student Help Center</h1>
+      <p class="text-sm mt-1">Find answers to your common questions below</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10" x-data="{ open: null }">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+
+      <!-- FAQ 1 -->
+      <div class="faq-box">
+        <button @click="open === 1 ? open = null : open = 1" class="faq-button">
+          <div class="flex items-center gap-2">
+            <span x-show="open !== 1" class="faq-icon">+</span>
+            <span x-show="open === 1" class="faq-icon">−</span>
+            <span>What is this website for?</span>
+          </div>
+        </button>
+        <div x-show="open === 1" class="mt-2 text-gray-600" x-transition>
+          This website helps students get answers to academic questions and explore additional study resources.
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-box">
+        <button @click="open === 2 ? open = null : open = 2" class="faq-button">
+          <div class="flex items-center gap-2">
+            <span x-show="open !== 2" class="faq-icon">+</span>
+            <span x-show="open === 2" class="faq-icon">−</span>
+            <span>Is it free to use?</span>
+          </div>
+        </button>
+        <div x-show="open === 2" class="mt-2 text-gray-600" x-transition>
+          Yes, it's completely free for students to use and learn from.
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-box">
+        <button @click="open === 3 ? open = null : open = 3" class="faq-button">
+          <div class="flex items-center gap-2">
+            <span x-show="open !== 3" class="faq-icon">+</span>
+            <span x-show="open === 3" class="faq-icon">−</span>
+            <span>Can I ask any question?</span>
+          </div>
+        </button>
+        <div x-show="open === 3" class="mt-2 text-gray-600" x-transition>
+          Yes! You can ask questions related to formulas, topics, or subjects, and the system will help you find the answers.
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-box">
+        <button @click="open === 4 ? open = null : open = 4" class="faq-button">
+          <div class="flex items-center gap-2">
+            <span x-show="open !== 4" class="faq-icon">+</span>
+            <span x-show="open === 4" class="faq-icon">−</span>
+            <span>Do I need to sign up to use the site?</span>
+          </div>
+        </button>
+        <div x-show="open === 4" class="mt-2 text-gray-600" x-transition>
+          No signup is required to access basic features. However, creating an account allows you to save questions, track progress, and get personalized suggestions.
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-box">
+        <button @click="open === 5 ? open = null : open = 5" class="faq-button">
+          <div class="flex items-center gap-2">
+            <span x-show="open !== 5" class="faq-icon">+</span>
+            <span x-show="open === 5" class="faq-icon">−</span>
+            <span>What subjects does it support?</span>
+          </div>
+        </button>
+        <div x-show="open === 5" class="mt-2 text-gray-600" x-transition>
+          Currently, the website supports Math, Physics, Chemistry, and Computer Science. More subjects are coming soon!
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-box">
+        <button @click="open === 6 ? open = null : open = 6" class="faq-button">
+          <div class="flex items-center gap-2">
+            <span x-show="open !== 6" class="faq-icon">+</span>
+            <span x-show="open === 6" class="faq-icon">−</span>
+            <span>Can I contribute questions or feedback?</span>
+          </div>
+        </button>
+        <div x-show="open === 6" class="mt-2 text-gray-600" x-transition>
+          Absolutely! We welcome your contributions and feedback. You can contact us through the feedback form or email us directly.
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="faq-box">
+        <button @click="open === 7 ? open = null : open = 7" class="faq-button">
+          <div class="flex items-center gap-2">
+            <span x-show="open !== 7" class="faq-icon">+</span>
+            <span x-show="open === 7" class="faq-icon">−</span>
+            <span>Does the website provide step-by-step solutions?</span>
+          </div>
+        </button>
+        <div x-show="open === 7" class="mt-2 text-gray-600" x-transition>
+          Yes, for most questions we offer step-by-step breakdowns to help students understand how the answer is derived.
+        </div>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="faq-box">
+        <button @click="open === 8 ? open = null : open = 8" class="faq-button">
+          <div class="flex items-center gap-2">
+            <span x-show="open !== 8" class="faq-icon">+</span>
+            <span x-show="open === 8" class="faq-icon">−</span>
+            <span>Can I use this site on my phone?</span>
+          </div>
+        </button>
+        <div x-show="open === 8" class="mt-2 text-gray-600" x-transition>
+          Yes, the site is fully responsive and works great on mobile, tablet, and desktop devices.
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="text-center text-sm py-4 mt-10">
+    &copy; 2025 Student Help Website. All rights reserved.
+  </footer>
+
+</body>
+</html>
